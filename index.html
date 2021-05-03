@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Simulation Dots</title>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <style type="text/css">
+
+      path: hover {
+        fill-opacity: .7;
+      } 
+
+      p {
+        font-family: Helvetica, sans-serif;
+        font-size: 15px;
+        color: #56595d;
+        text-align: center;
+      }
+
+      h2 {
+        font-family: Helvetica, sans-serif;
+        font-size: 15px;
+        color: white;
+        text-align: center;
+      }
+
+      #dot_myChart {
+        svg{
+          align-content: center;
+        }
+      }
+      
+      .xaxis path,
+      .xaxis line {
+        stroke: #57595D;
+              opacity: 0.25;
+
+      }
+
+      .xaxis text {
+        font-size: 12px;
+        color: #57595D;
+        font-family: arial;
+      }
+
+      .button {
+        background-color: #56595d;
+        color: white;
+        font-family: arial; 
+        padding: 6px 8px;
+        border: 2px solid #56595d; 
+        display: inline-block;
+        font-size: 12px;
+        border-radius: 4px;
+      }
+
+
+      #Dot_tooltip {
+        position: absolute;
+        width: auto;
+        height: auto;
+        padding: 10px;
+        background-color: white;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+        -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+        -moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+        pointer-events: none;
+        align-content: center;
+      }
+
+      #Dot_tooltip.hidden {
+        display: none;
+      }
+      
+      #Dot_tooltip p {
+        margin: 0;
+        font-family: arial;
+        font-size: 14px;
+        line-height: 20px;
+        text-align: left
+      }
+
+
+    </style>
+  </head>
+  <body>
+
+    <div>
+      <h2>buffer</h2>
+    </div>  
+
+    <div id="Dot_tooltip" class="hidden" style="text-align:center;" >
+      <p><strong><span id="Dot_tooltipTitle"></span></strong></p>
+      <p><span id="value"></span></p>
+    </div>
+
+    <div id="dot_Text"
+       style="text-align:center;"> 
+    </div>
+
+    <div id="dot_myChart"
+       style="text-align:center;"> 
+    </div>
+
+    <div>
+      <h2>buffer</h2>
+    </div>  
+
+    <div id="button" style ="text-align: center;">
+    <input name="button" 
+          class="button "
+          type="button" 
+          value="RUN SIMULATION AGAIN" 
+          onclick="updateData()" />
+    </div>
+
+
+    <script type="text/javascript" src="Election2020Sim.js"></script>
+      
+
+  </body>
+</html>
